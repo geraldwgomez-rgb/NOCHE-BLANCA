@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import Invitacion from "./Invitacion";
-import Confirmacion from "./Confirmacion";
 import Admin from "./Admin";
 import "./App.css";
-
 // Rosa dibujada con SVG. La clase define la esquina donde va.
 function Rosa({ className }) {
   return (
@@ -38,7 +36,6 @@ export default function App() {
     return (
       <Invitacion
         onVolver={() => setPantalla("sobre")}
-        onSi={() => setPantalla("confirmacion")}
       />
     );
   }

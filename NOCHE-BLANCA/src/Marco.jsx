@@ -6,6 +6,8 @@ const chispas = [
   { x: "46%", d: "2.2s" },
 ];
 
+// Estructura común de las pantallas 2 y 3: fogata de fondo, texto de la invitación
+// a la izquierda y contenido variable a la derecha.
 export default function Marco({ onVolver, children }) {
   return (
     <div className="invitacion">
