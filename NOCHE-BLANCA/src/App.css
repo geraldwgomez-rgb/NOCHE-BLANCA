@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Cinzel+Decorative:wght@400;700&family=Italiana&family=Marcellus&family=Pinyon+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap");
 
 html, body, #root {
   margin: 0;
@@ -717,4 +718,197 @@ button.enlace {
   padding: 8px 12px;
   border-radius: 6px;
   font-size: 14px;
+}
+/* ---------- TIPOGRAFÍA ELEGANTE ---------- */
+
+.invitacion,
+.tarjeta {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.celebramos,
+.pregunta,
+button,
+.volver,
+.campo {
+  font-family: "Cinzel", "Times New Roman", serif;
+}
+
+.celebramos {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.fecha {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(20px, 2.6vw, 24px);
+  font-weight: 600;
+}
+
+.mensaje {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(18px, 2.2vw, 21px);
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.respuesta .pregunta {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.respuesta .detalle {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.campo {
+  font-size: 15px;
+  letter-spacing: 0.06em;
+}
+
+button {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.error {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 17px;
+  font-weight: 600;
+}
+/* ---------- TIPOGRAFÍA ELEGANTE (versión marcada) ---------- */
+
+.titulo {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(80px, 10vw, 130px);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: 0;
+}
+
+.celebramos {
+  font-family: "Cinzel", serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5em;
+}
+
+.fecha {
+  font-family: "Cinzel", serif;
+  font-size: clamp(18px, 2.4vw, 24px);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.numero {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(60px, 8vw, 88px);
+  font-weight: 700;
+}
+
+.mensaje {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(20px, 2.4vw, 24px);
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.respuesta .pregunta {
+  font-family: "Cinzel", serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.respuesta .detalle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.campo {
+  font-family: "Cinzel", serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.campo::placeholder {
+  font-family: "Cinzel", serif;
+  letter-spacing: 0.1em;
+}
+
+button {
+  font-family: "Cinzel", serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.error {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 19px;
+  font-weight: 600;
+}
+/* ---------- AJUSTE DE LA INICIAL "N" DEL TÍTULO ---------- */
+
+.titulo {
+  font-size: clamp(64px, 8.5vw, 112px);
+  line-height: 1;
+}
+
+.titulo::first-letter {
+  font-size: 0.72em;
+  vertical-align: 0.08em;
+}
+/* ---------- LEGIBILIDAD DEL SOBRE ---------- */
+
+.titulo-sobre {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(3.2rem, 8vw, 6rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.sello span {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(34px, 5vmin, 56px);
+  font-weight: 400;
+  color: #4a2f06;
+  text-shadow: 0 1px 0 rgba(255, 240, 180, 0.7);
+}
+.titulo-sobre {
+  font-family: "Cinzel Decorative", serif;
+  font-size: clamp(2.2rem, 6.5vw, 4.6rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #f3dca4;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+  white-space: nowrap;
+}/* ---------- TÍTULO DE LA INVITACIÓN (Great Vibes) ---------- */
+
+.titulo {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(80px, 8.5vw, 112px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.titulo::first-letter {
+  font-size: 0.72em;
+  vertical-align: 0.08em;
 }
