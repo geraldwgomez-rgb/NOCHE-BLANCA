@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Invitacion from "./Invitacion";
+import Confirmacion from "./Confirmacion";
 import Admin from "./Admin";
 import "./App.css";
 
@@ -20,10 +21,10 @@ function Rosa({ className }) {
 }
 
 export default function App() {
-  const [abierto, setAbierto] = useState(false);
+  // Pantallas: "sobre" | "invitacion" | "confirmacion"
+  const [pantalla, setPantalla] = useState("sobre");
   const [ruta, setRuta] = useState(window.location.hash);
 
-  // Detecta cambios en la dirección (por ejemplo, al escribir #admin)
   useEffect(() => {
     const cambiarRuta = () => setRuta(window.location.hash);
     window.addEventListener("hashchange", cambiarRuta);
@@ -33,10 +34,21 @@ export default function App() {
   // Panel de administración: tu-sitio.vercel.app/#admin
   if (ruta === "#admin") return <Admin />;
 
-  if (abierto) return <Invitacion onVolver={() => setAbierto(false)} />;
+  if (pantalla === "invitacion") {
+    return (
+      <Invitacion
+        onVolver={() => setPantalla("sobre")}
+        onSi={() => setPantalla("confirmacion")}
+      />
+    );
+  }
+
+  if (pantalla === "confirmacion") {
+    return <Confirmacion onVolver={() => setPantalla("invitacion")} />;
+  }
 
   return (
-    <button className="sobre" onClick={() => setAbierto(true)} aria-label="Abrir invitación">
+    <button className="sobre" onClick={() => setPantalla("invitacion")} aria-label="Abrir invitación">
       <div className="sobre-cuerpo">
         <div className="solapa solapa-superior" />
         <div className="solapa solapa-izquierda" />
