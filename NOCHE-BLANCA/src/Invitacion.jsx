@@ -2,6 +2,7 @@ import { useState } from "react";
 import { supabase } from "./supabaseClient";
 import Marco from "./Marco";
 
+const GRUPOS = ["11-1", "11-2", "11-3"];
 const inicial = { nombre: "", tipo: "estudiante", grupo: "" };
 
 export default function Invitacion({ onVolver }) {
@@ -17,13 +18,13 @@ export default function Invitacion({ onVolver }) {
     setError("");
 
     if (!form.nombre.trim()) return setError("Escribe tu nombre");
-    if (esEstudiante && !form.grupo.trim()) return setError("Escribe tu grupo");
+    if (esEstudiante && !form.grupo) return setError("Elige tu grupo");
 
     setEnviando(true);
     const { error } = await supabase.from("confirmaciones").insert({
       nombre: form.nombre.trim(),
       tipo: form.tipo,
-      grupo: esEstudiante ? form.grupo.trim() : null,
+      grupo: esEstudiante ? form.grupo : null,
       asistira: true,
     });
     setEnviando(false);
@@ -62,7 +63,7 @@ export default function Invitacion({ onVolver }) {
                 type="button"
                 key={t}
                 className={form.tipo === t ? "opcion activa" : "opcion"}
-                onClick={() => setForm({ ...form, tipo: t })}
+                onClick={() => setForm({ ...form, tipo: t, grupo: "" })}
               >
                 {t === "estudiante" ? "Estudiante" : "Profesor"}
               </button>
@@ -70,12 +71,21 @@ export default function Invitacion({ onVolver }) {
           </div>
 
           {esEstudiante && (
-            <input
-              className="campo"
-              placeholder="Tu grupo"
-              value={form.grupo}
-              onChange={(e) => setForm({ ...form, grupo: e.target.value })}
-            />
+            <>
+              <p className="etiqueta">Tu grupo</p>
+              <div className="grupos">
+                {GRUPOS.map((g) => (
+                  <button
+                    type="button"
+                    key={g}
+                    className={form.grupo === g ? "opcion activa" : "opcion"}
+                    onClick={() => setForm({ ...form, grupo: g })}
+                  >
+                    {g}
+                  </button>
+                ))}
+              </div>
+            </>
           )}
 
           {error && <p className="error">{error}</p>}

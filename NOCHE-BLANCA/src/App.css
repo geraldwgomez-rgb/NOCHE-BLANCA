@@ -16,7 +16,7 @@ html, body, #root {
   padding: 0;
   border: none;
   border-radius: 0;
-  background: #3a0509;
+  background: #0a0125;
   overflow: hidden;
   cursor: pointer;
 }
@@ -27,7 +27,7 @@ html, body, #root {
   background:
     radial-gradient(circle at 30% 20%, rgba(255, 190, 90, 0.18), transparent 35%),
     radial-gradient(circle at 80% 85%, rgba(255, 190, 90, 0.12), transparent 40%),
-    linear-gradient(160deg, #8a1424 0%, #5c0c17 55%, #3a0509 100%);
+    linear-gradient(160deg, #190230 0%, #5c0c17 55%, #3a0509 100%);
   animation: respirar 6s ease-in-out infinite;
 }
 
@@ -911,4 +911,143 @@ button {
 .titulo::first-letter {
   font-size: 0.72em;
   vertical-align: 0.08em;
+}
+/* ---------- SOBRE AZUL REAL ---------- */
+
+.sobre {
+  background: #0a1d63;
+}
+
+.sobre-cuerpo {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(170, 200, 255, 0.22), transparent 35%),
+    radial-gradient(circle at 80% 85%, rgba(170, 200, 255, 0.14), transparent 40%),
+    linear-gradient(160deg, #031649 0%, #031649 55%, #031649 100%);
+}
+
+.solapa-superior {
+  background: linear-gradient(180deg, #031649, #031649);
+}
+
+.solapa-izquierda {
+  background: linear-gradient(90deg, #031649, #031649);
+}
+
+.solapa-derecha {
+  background: linear-gradient(270deg, #031649, #031649);
+}
+
+.solapa-inferior {
+  background: linear-gradient(0deg, #031649, #031649);
+}
+
+.pista {
+  color: #f3dca4;
+}
+/* ---------- SOBRE BLANCO ---------- */
+
+.sobre {
+  background: #ffffff;
+}
+
+.sobre-cuerpo {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.9), transparent 35%),
+    radial-gradient(circle at 80% 85%, rgba(220, 225, 240, 0.6), transparent 40%),
+    linear-gradient(160deg, #ffffff 0%, #f1f3f8 55%, #e2e6f0 100%);
+}
+
+.solapa-superior {
+  background: linear-gradient(180deg, #ffffff, #eef1f7);
+}
+
+.solapa-izquierda {
+  background: linear-gradient(90deg, #e4e8f2, #f7f8fb);
+}
+
+.solapa-derecha {
+  background: linear-gradient(270deg, #e4e8f2, #f7f8fb);
+}
+
+.solapa-inferior {
+  background: linear-gradient(0deg, #dde2ee, #f3f5fa);
+}
+
+.titulo-sobre {
+  color: #1c2033;
+  text-shadow: none;
+}
+
+.pista {
+  color: #1c2033;
+}
+/* ---------- PANEL DE ADMINISTRACIÓN: FILTROS Y ACCIONES ---------- */
+
+.admin .filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.admin .filtros input {
+  flex: 1;
+  min-width: 180px;
+  background: #ffffff;
+  color: #1c2033;
+  border-radius: 8px;
+}
+
+.admin .acciones {
+  margin-top: 12px;
+}
+
+.admin button.eliminar {
+  padding: 6px 12px;
+  font-size: 13px;
+  background: #8b1a1a;
+  color: #ffffff;
+}
+/* ---------- SELECCIÓN DE GRUPO EN EL FORMULARIO ---------- */
+
+.etiqueta {
+  margin: 4px 0 0;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f5e6b8;
+}
+
+.grupos {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.grupos .opcion {
+  flex: 1;
+}
+
+/* ---------- CHIPS DE GRUPO EN EL ADMIN ---------- */
+
+.admin .chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.admin button.chip {
+  padding: 8px 14px;
+  font-size: 13px;
+  background: transparent;
+  color: #e8c57a;
+  border: 1px solid #c9a45c;
+  font-weight: normal;
+}
+
+.admin button.chip.activo {
+  background: #e8c57a;
+  color: #1c2033;
+  font-weight: bold;
 }
